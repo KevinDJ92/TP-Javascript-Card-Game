@@ -1,0 +1,104 @@
+/* MISE EN FORME GENERALE : THEME01 */
+
+:root{
+    --labels-bg-color: rgba(182, 160, 154, 0.8);
+    --borders-color: #341a0b;
+}
+
+body{
+    background-color: black;
+    font-size: 3vh;
+    margin: auto;
+}
+
+body *{
+    margin: auto;
+    border-radius: 25px;
+}
+
+main {
+    text-align: center;
+
+    display: -webkit-flex;
+    -webkit-flex-direction: column;
+
+    display: flex;
+    flex-direction: column;
+}
+
+main > *{
+    -webkit-flex: auto;
+    flex: auto;
+}
+
+header{
+    text-align: center;
+}
+
+footer{
+    text-align: center;
+}
+
+thead {
+    text-align: center;
+}
+
+h1 {
+    display: inline-block;
+    font-size: 5vh;
+    background-color: var(--labels-bg-color);
+    margin-bottom: 2vh;
+    padding: 1vh 1vw;
+    border: solid 0.2vw var(--borders-color);
+}
+
+button{
+    font-size: 3vh;
+    font-weight: bold;
+    padding: 1vh 1vw;
+}
+
+.player_stats{
+    border: outset 1vh saddlebrown;
+    background-color: darkgrey;
+    display: inline-block;
+    margin: 0 1vw;
+    padding: 0.5vh 0.5vw;
+    border-radius: 25px 0 0 25px;
+}
+
+.victory_text{
+    margin: 10vh auto;
+    padding: 5vh 3vw;
+    font-size: 8vh;
+    font-weight: bold;
+    background-color: var(--labels-bg-color);
+    border: solid 0.2vw var(--borders-color);
+}
+
+#btn_confirm_victory{
+    font-size: 5vh;
+    padding: 2vh 3vw;
+}
+
+#player_information * {
+    display: inline-block;
+    font-weight: bold;
+}
+
+#player_information > div{
+    background-color: var(--labels-bg-color);
+    margin: 0 1vw;
+    border-left: solid 0.2vw var(--borders-color);
+    border-top: solid 0.6vh var(--borders-color);
+    border-bottom: solid 0.6vh var(--borders-color);
+    border-radius: 25px 0 0 25px;
+}
+
+#player_information > div > div{
+    margin: 0 0 0 1vw;
+}
+
+#cards_table *{
+    border-radius: 0;
+}

@@ -1,0 +1,176 @@
+:root{
+    --labels-bg-color: rgba(182, 160, 154, 0.8);
+    --borders-color: #341a0b;
+}
+
+body{
+    background-image: url("../images/theme01/background.png");
+    background-size: cover;
+    font-size: 3vh;
+    margin: auto;
+    color: indigo;
+}
+
+body *{
+    margin:auto;
+    border-radius: 25px;
+}
+
+main {
+    text-align: center;
+    display: flex;
+}
+
+
+h1, h2, #img div div, #about span,  p, #startGame, form, #about span, #highscore>div>div>img{
+    display: inline-block;
+    text-align: center;
+    font-variant: small-caps;
+    font-weight: bold;
+    font-size: 2vw;
+    background-color: var(--labels-bg-color);
+    margin-bottom: 2vh;
+    padding: 1vh 1vw;
+    border: solid 0.2vw var(--borders-color);
+}
+
+h1{
+    margin-top: 1vh;
+}
+
+#navigation li, #navigation{
+    padding:1em;
+}
+
+input{
+    font-size: 2vh;
+    text-align: center;
+}
+
+
+nav ul{
+    background-color: lightslategray;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav li{
+    display: inline-block;
+}
+
+#firstSelection{
+    background-color: cadetblue;
+}
+
+nav li a{
+    text-align: center;
+    font-variant: small-caps;
+    font-weight: bold;
+    font-size: 2.5vw;
+    color: indigo;
+    text-decoration: none;
+}
+
+header>div, #about div div, #about div div div, #img, form ul, footer, #div_settings, #highscore_div{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#div_settings{
+    justify-content: center;
+}
+
+#img div, #about div div div{
+    display: inline-block;
+}
+
+#img div div, #about span {
+    display: block;
+}
+
+
+.notDisplayed{
+    display: none;
+}
+
+form{
+    width:45vw;
+}
+
+form ul{
+    list-style: none;
+}
+
+#img{
+    width: 50vw;
+}
+
+#theme img{
+    width:10vw;
+    border-radius: 0 ;
+
+}
+
+#startGame{
+    background-color: lightslategray;
+    color: indigo;
+    margin: 5px;
+}
+
+label{
+    width: 100px;
+    text-align: left;
+}
+
+#name{
+    width:40vw;
+    height: 3vh;
+    margin: 10px;
+}
+
+#highscore_div{
+    background-color: var(--labels-bg-color);
+    margin-bottom: 2vh;
+    padding: 1vh 1vw;
+    border: solid 0.2vw var(--borders-color);
+    width:95vw;
+    height: 65vh;
+}
+
+#listeScores{
+    list-style: none;
+}
+
+#listeScores td{
+    text-align: center;
+    font-size:3.5vh;
+    width: 15vw;
+}
+
+#listeScores th{
+    text-align: center;
+    font-size:5vh;
+}
+
+#levelIndication{
+    font-size: 5vh;
+    font-weight: bold;
+    font-variant: small-caps oldstyle-nums;
+    margin: 1em;
+}
+
+#highscore_table_div{
+    height:65vh;
+}
+
+#goLeft, #goRight, input[type="radio"], #startGame{
+    cursor: pointer;
+}
+
+#settingDifficulty{
+    border-radius: 25px 0 0 25px;
+height: 3vh;
+}

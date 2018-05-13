@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Jeu de mémoire" >
+    <meta name="robots" content="index,follow" >
+
+    <title>Jeu de mémoire</title>
+
+    <link rel="shortcut icon" type="images/x-icon" href="images/favicon.ico" >
+    <link rel="stylesheet" href="style/main.css" >
+</head>
+<body>
+<header id="top">
+    <nav  id="navigation">
+        <ul>
+            <li id="firstSelection"> <a href="#settings">Jouer</a></li>
+            <li> <a href="#highscore">Meilleurs scores</a> </li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <section id="settings">
+        <div>
+            <div id="div_settings">
+                <div id="img">
+                    <div>
+                        <img src="images/index/left.png" alt="Aller vers la gauche" id="goLeft">
+                    </div>
+                    <div id="theme">
+                        <div>Dungeons and Dragons</div>
+                        <img src="images/theme01/card_back.png" alt="Image du thème" id="img_theme_back">
+                        <img src="images/theme01/card_01.png" alt="Image du thème" id="img_theme_front">
+                    </div>
+                    <div>
+                        <img src="images/index/right.png" alt="Aller vers la droite" id="goRight">
+                    </div>
+                </div>
+                <div>
+                    <form>
+
+                        <label for="name">Nom: </label>
+                        <input type="text" id="name" name="name" placeholder="Votre nom"/>
+
+                        <fieldset id ="fieldDifficulty">
+                            <legend>Difficulté</legend>
+                            <input id = "settingDifficulty" type="number" min="1" max="20" step="1" value="1" />
+                        </fieldset>
+                        <fieldset id="fieldSound">
+                            <legend>Son</legend>
+                            <ul>
+                                <li>
+                                    <input type="radio" id="soundActive" name="settingSound" value="active" checked="checked"/>
+                                    <label for="soundActive">Activer</label>
+                                </li>
+                                <li>
+                                    <input type="radio" id="soundNotActive" name="settingSound" value="notActive" />
+                                    <label for="soundNotActive">Désactiver</label>
+                                </li>
+                            </ul>
+                        </fieldset>
+                    </form>
+                    <button id="startGame">Lancer le jeu</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="rules" class="notDisplayed">
+        <p>
+            "Je me souviens" est un jeu de mémoire dans lequel vous devez trouver toutes les paires de cartes
+            cachées.<br>
+            A chaque fois que vous cliquez sur une carte, elle se révèle ; vous devez ensuite cliquer sur
+            une seconde carte qui va se révéler à son tour. Si les deux cartes sont identiques, elles restent
+            dévoilées.<br>
+            La partie se termine lorsque toutes les cartes sont révélées.<br>
+            A chaque niveau pair, les cartes sont brièvement révélées avant que la partie ne commence et le niveau de
+            difficulté augmente.<br>
+            Votre score sera calculé en fonction de divers facteurs (temps pour finir le
+            niveau, nombre de cartes, nombre d'essais...).<br>
+            A la fin d'un niveau, vous pouvez retourner à l'accueil, rejouer le même niveau de difficulté ou passer
+            au niveau suivant.<br>
+            Vous pouvez également mettre le jeu en pause en cours de partie.
+        </p>
+    </section >
+    <section id="highscore" class="notDisplayed">
+        <div id="highscore_div">
+            <div >
+                <img src="images/index/left.png" alt="Aller vers la gauche" id="goLeftScore">
+            </div>
+            <div id = "highscore_table_div">
+                <span id="levelIndication">Niveau 1</span>
+                <table id="listeScores">
+                    <tr>
+                        <th></th>
+                        <th>Date</th>
+                        <th>Nom</th>
+                        <th>Temps</th>
+                        <th>Tentatives</th>
+                        <th>Score</th>
+                    </tr>
+                </table>
+            </div>
+            <div>
+                <img src="images/index/right.png" alt="Aller vers la droite" id="goRightScore">
+            </div>
+        </div>
+
+    </section>
+    <section id="about" class="notDisplayed">
+        <div>
+            <p>Des mêmes créateurs </p>
+            <div>
+                <div>
+                    <img src="images/index/snake.png" alt="Image du jeu snake">
+                    <span>Snake</span>
+                </div>
+                <div>
+                    <img src="images/index/spaceInvaders.png" alt="Image du jeu space invaders">
+                    <span>Space Invaders</span>
+                </div>
+                <div>
+                    <img src="images/index/battleship.png" alt="Image du jeu battleship">
+                    <span>Battleship</span>
+                </div>
+            </div>
+            <span>&copy; ISI 2017</span>
+        </div>
+    </section>
+
+</main>
+<script src="script/jquery-3.2.1.min.js"></script>
+<script src="script/playerPreference.js"></script>
+<script src="script/scores.js"></script>
+<script src="script/demoScores.js"></script>
+<script src="script/index.js"></script>
+</body>
+</html>

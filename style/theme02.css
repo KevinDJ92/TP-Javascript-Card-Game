@@ -1,0 +1,8 @@
+/* MISE EN FORME GENERALE : THEME02 */
+
+body{
+    background-image: url("../images/theme02/background.png");
+    background-size: cover;
+    font-size: 3vh;
+    margin: auto;
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Jeu de mémoire" >
+        <meta name="robots" content="index,follow" >
+
+        <title>Je me souviens</title>
+        <link rel="stylesheet" type="text/css" href="style/cards.css" >
+        <link rel="stylesheet" type="text/css" href="style/game.css" >
+        <link rel="shortcut icon" type="images/x-icon" href="images/favicon.ico" >
+    </head>
+    <body>
+        <header>
+            <h1>
+                Je me souviens
+            </h1>
+            <div id="player_information">
+                <div>
+                    <div>Niveau</div>
+                    <div class="player_stats" id="game_level">00</div>
+                </div>
+                <div>
+                    <div>Chronomètre</div>
+                    <div class="player_stats" id="get_timer">00:00:00</div>
+                </div>
+                <div>
+                    <div>Paires trouvées</div>
+                    <div class="player_stats" id="found_pairs">00</div>
+                </div>
+                <div>
+                    <div>Tentatives</div>
+                    <div class="player_stats" id="nb_tries">00</div>
+                </div>
+                <div>
+                    <div>Clics</div>
+                    <div class="player_stats" id="nb_clicks">00</div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <!-- Tableau des cartes
+        Il s'implémente automatiquement en fonction des paramètres passés -->
+            <div>
+                <table id="cards_table">
+                    <thead></thead>
+                    <tfoot></tfoot>
+                    <tbody id="cards_table_body"></tbody>
+                </table>
+            </div>
+        </main>
+        <footer>
+            <button type="button" id="btn_pause">PAUSE</button>
+            <button type="button" id="btn_stop">RETOUR A L'ACCUEIL</button>
+            <button type="button" id="btn_reset">REJOUER</button>
+            <button type="button" id="btn_next">NIVEAU SUIVANT</button>
+        </footer>
+    <!-- Scripts JS -->
+        <script src="script/jquery-3.2.1.min.js"></script>
+        <script src="script/playerPreference.js"></script>
+        <script src="script/scores.js"></script>
+        <script src="script/timer.js"></script>
+        <script src="script/game.js"></script>
+    </body>
+</html>

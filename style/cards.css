@@ -1,0 +1,53 @@
+
+/*** MISE EN FORME DE LA CARTE A RETOURNER ***/
+
+.container { /* Boîte contenant la carte, définit la taille de la carte */
+    /* Adaptation à tous les explorateurs : profondeur du point de vue de l'objet*/
+    -webkit-perspective: 400px;
+    -moz-perspective: 400px;
+    -o-perspective: 400px;
+    perspective: 400px;
+}
+.card {
+    width: 100%;
+    height: 100%;
+    /* Adaptation à tous les explorateurs : délai de la transition */
+    -webkit-transition: -webkit-transform 1s;
+    -moz-transition: -moz-transform 1s;
+    -o-transition: -o-transform 1s;
+    transition: transform 1s;
+    /* style de transformation : aspect 3D lors de la transformation */
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transform-origin: 50% 50%;
+}
+.card div {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    /* Adaptation à tous les explorateurs : caché */
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.card .front { /* Face de la carte */
+    background-size: contain;
+    /* Adaptation à tous les explorateurs : coté retourné */
+    -webkit-transform: rotateY( 180deg );
+    -moz-transform: rotateY( 180deg );
+    -o-transform: rotateY( 180deg );
+    transform: rotateY( 180deg );
+}
+.card .back { /* Dos de la carte : coté visible */
+    background-size: 100%;
+}
+.card.flipped {
+    /* Adaptation à tous les explorateurs : retourne le bloc en lançant la transformation selon le style défini pour le bloc .card */
+    -webkit-transform: rotateY( 180deg );
+    -moz-transform: rotateY( 180deg );
+    -o-transform: rotateY( 180deg );
+    transform: rotateY( 180deg );
+}
